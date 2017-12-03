@@ -37,7 +37,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'bootstrap-datepicker-rails', '~> 1.7', '>= 1.7.1.1'
 gem 'rspec-rails', '~> 3.6'
 gem 'simplecov', '~> 0.15.1'
-
+gem 'pg_tester'
 gem 'wdm', '>= 0.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -118,6 +118,8 @@ GEM
     orm_adapter (0.5.0)
     pg (0.21.0)
     pg (0.21.0-x86-mingw32)
+    pg_tester (0.1.0)
+      pg (~> 0.18, >= 0.18.2)
     popper_js (1.12.5)
     public_suffix (3.0.1)
     puma (3.11.0)
@@ -246,6 +248,7 @@ DEPENDENCIES
   jquery-rails (~> 4.3, >= 4.3.1)
   listen (>= 3.0.5, < 3.2)
   pg
+  pg_tester
   puma (~> 3.7)
   rails (~> 5.1.4)
   rspec-rails (~> 3.6)

@@ -1,5 +1,13 @@
 class TasksController < ApplicationController
 
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
+
+  attr_accessor :name, :description, :importance, :expiry
+  validates_presence_of :name, :description
+  validates_format_of :name, with: /[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?/u, :on => :create
+
   def index
     @tasks = current_user.tasks.all
     respond_to do |format|
