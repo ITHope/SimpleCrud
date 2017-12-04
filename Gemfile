@@ -39,6 +39,7 @@ gem 'rspec-rails', '~> 3.6'
 gem 'simplecov', '~> 0.15.1'
 gem 'pg_tester'
 gem 'wdm', '>= 0.1.0'
+gem 'devise-i18n'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

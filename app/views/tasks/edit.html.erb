@@ -4,5 +4,6 @@
     <%= f.text_field :description, value: @task.description %>
     <%= f.text_field :importance, placeholder: 'importance' %>
     <%= f.text_field :expiry, placeholder: 'entry date', id: "datepicker" %>
+    <%= f.check_box :is_done, placeholder: 'is_done', id: "is_done" %>
     <%= f.submit "save" %>
 <% end %>

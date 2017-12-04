@@ -1,13 +1,16 @@
 <div>
+
   <%= link_to 'New task', 'tasks/new'%>
-  <table style="border: 1px">
+
+  <table>
     <tr>
-      <th>Task</th>
-      <th>Description</th>
-      <th>Importance</th>
-      <th>Expiry</th>
-      <th>Update task</th>
-      <th>Delete task</th>
+      <th><%= flash[:task_loc] %></th>
+      <th><%= flash[:desk_loc] %></th>
+      <th><%= flash[:imp_loc] %></th>
+      <th><%= flash[:exp_loc] %></th>
+      <th><%= flash[:upd_loc] %></th>
+      <th><%= flash[:del_loc] %></th>
+      <th><%= flash[:done_loc] %></th>
     </tr>
   <% @tasks.each do |task| %>
       <div>
@@ -18,6 +21,7 @@
           <td><%= task.expiry %></td>
           <td><%= link_to 'update task', edit_task_path(id: task.id)%></td>
           <td><%= link_to 'delete task', delete_task_path(id: task.id), method: :delete %></td>
+          <td><%= task.is_done %></td>
         </tr>
       </div>
   <% end %>

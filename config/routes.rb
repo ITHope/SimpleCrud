@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   patch 'tasks/update/:id', to: 'tasks#update', as: 'update_task'
   delete 'tasks/delete/:id', to: 'tasks#delete', as: 'delete_task'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope "(:locale)", locale: /en|ru/ do
+    resources :tasks
+  end
+
 end

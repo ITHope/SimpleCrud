@@ -14,6 +14,14 @@ class TasksController < ApplicationController
       format.html{render 'tasks/index'}
       format.json{render :json => {tasks: @tasks}}
     end
+
+    flash[:task_loc] = t(:task_loc)
+    flash[:desk_loc] = t(:desk_loc)
+    flash[:imp_loc] = t(:imp_loc)
+    flash[:exp_loc] = t(:exp_loc)
+    flash[:upd_loc] = t(:upd_loc)
+    flash[:del_loc] = t(:del_loc)
+    flash[:done_loc] = t(:done_loc)
     # render 'tasks/index'
   end
 
@@ -50,6 +58,7 @@ class TasksController < ApplicationController
   end
 
   def task_update_params
-    params.require(:task).permit(:name, :description, :importance, :expiry)
+    params.require(:task).permit(:name, :description, :importance, :expiry, :is_done)
   end
+
 end

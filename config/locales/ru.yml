@@ -29,12 +29,12 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  task_loc: "Task"
-  desk_loc: "Description"
-  imp_loc: "Importance"
-  exp_loc: "Expiry"
-  upd_loc: "Update Task"
-  del_loc: "Delete Task"
-  done_loc: "Done"
+ru:
+  hello: "Привет мир"
+  task_loc: "Задание"
+  desk_loc: "Описание"
+  imp_loc: "Приоритет"
+  exp_loc: "Дата выполнения"
+  upd_loc: "Обновить задание"
+  del_loc: "Удалить задание"
+  done_loc: "Сделано"
