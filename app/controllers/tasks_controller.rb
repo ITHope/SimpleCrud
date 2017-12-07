@@ -4,6 +4,8 @@ class TasksController < ApplicationController
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
+
   attr_accessor :name, :description, :importance, :expiry
   validates_presence_of :name, :description
   validates_format_of :name, with: /[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?/u, :on => :create

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20171204214431) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.uuid "user_id"
-    t.datetime "expiry", default: "2017-12-02 19:55:20"
+    t.datetime "expiry", default: "2017-12-07 18:01:14"
     t.integer "importance", default: 0
     t.boolean "is_done", default: false
     t.index ["user_id"], name: "index_tasks_on_user_id"
